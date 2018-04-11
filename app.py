@@ -27,17 +27,17 @@ def add_numbers_post():
 	  	return render_template('add_numbers.html')
 	  elif request.method == 'POST':
   	      print(request.form['text'].split())
-  	      chars = '!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890'
+               chars = '!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890'
 
-length = input('password length? ')
-length =int(length)
-quantity = input('number of passwords? ')
-quantity = int(quantity)
+		length = input('password length? ')
+		length =int(length)
+		quantity = input('number of passwords? ')
+		quantity = int(quantity)
   	      try:
   	      	for p in range(quantity):
-    password = ''
-    for c in range(length):
-        password += random.choice(chars)
+    			password = ''
+    		for c in range(length):
+        		password += random.choice(chars)
   	      	return render_template('add_numbers.html', result=str(password))
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
