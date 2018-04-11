@@ -38,7 +38,7 @@ def add_numbers_post():
     			password = ''
     		for c in range(length):
         		password += random.choice(chars)
-  	      	return render_template('add_numbers.html', result=str(password))
+  	      	 return render_template('add_numbers.html', result=str(password))
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
 
